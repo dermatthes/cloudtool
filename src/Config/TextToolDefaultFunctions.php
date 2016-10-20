@@ -28,9 +28,6 @@
             return $_SERVER["REMOTE_ADDR"];
         }
 
-        public static function SERVER_IP() {
-
-        }
 
         public static function BASE64_ENC($input) {
             return base64_encode($input);
@@ -59,6 +56,10 @@
             if ( ! file_exists($filename))
                 throw new \Exception("File not found: '$filename'");
             return self::$curTextTool->parse($filename);
+        }
+
+        public static function STR_REPLACE($search, $replace, $in) {
+            return str_replace($search, $replace, $in);
         }
 
     }

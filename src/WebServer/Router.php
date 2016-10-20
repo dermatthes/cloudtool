@@ -68,7 +68,8 @@
                         exit;
                     } catch (\Exception $e) {
                         self::Log("[Client: {$_SERVER["REMOTE_ADDR"]}][Exception]: {$e->getMessage()}");
-                        throw $e;
+                        self::Fail(500, $e->getMessage());
+
                     }
 
                 }
