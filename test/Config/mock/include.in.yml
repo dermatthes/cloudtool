@@ -1,0 +1,4 @@
+#cloud-init
+
+coreos:
+  server-ip: {{ ENV("some env") }}

@@ -1,0 +1,7 @@
+
+
+{{ FILE("include.in.yml") }}
+
+{{ INCLUDE("include.in.yml") }}
+
+remote-ip: {{ REMOTE_IP() }}

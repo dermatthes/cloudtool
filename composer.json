@@ -1,0 +1,30 @@
+{
+    "name": "cloud/cloudtool",
+    "type": "library",
+    "description": "generate cloud-config.yml and other config files on the fly",
+    "keywords": ["cloud", "template"],
+    "homepage": "https://getgismo.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthias Leuffen",
+            "email": "matthes@leuffen.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "symfony/expression-language": "^3.1",
+        "wikimedia/ip-set": "^1.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CloudTool\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
