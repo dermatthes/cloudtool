@@ -1,4 +1,4 @@
 #cloud-init
 
 coreos:
-  server-ip: {{ ENV("some env") }}
+  server-ip: {{ "some env" }}
