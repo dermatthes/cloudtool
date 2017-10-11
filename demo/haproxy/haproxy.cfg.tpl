@@ -51,7 +51,7 @@ listen stats
    stats enable
    stats refresh 5s
    stats show-node
-   stats auth contiadmin:killacat
+   stats auth adminxyz:somepasswd
    stats uri  /
 
 ############################
