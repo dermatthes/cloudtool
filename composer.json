@@ -15,17 +15,13 @@
         "php": ">=7.0",
         "symfony/expression-language": "^3.1",
         "wikimedia/ip-set": "^1.1.0",
-        "text/template": "*"
+        "text/template": "*",
+        "phore/cli": "*"
     },
     "autoload": {
         "psr-4": {
             "CloudTool\\": "src"
         }
     },
-    "minimum-stability": "dev",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.1-dev"
-        }
-    }
+    "minimum-stability": "dev"
 }
