@@ -1,0 +1,16 @@
+{
+  "hosts": [
+    {
+      "host": "web1.xyz.com",
+      "lamp": {
+        "doc_root": "/var/www/web1.xyz.com/www",
+        "uid": 1001,
+        "gid": 1001,
+        "users": [
+          "web1.xyz.com_user1:$6$fzOPaz0z$GkbUYWbhR38hA:",
+          "web1.xyz.com_user2:$6$fzOPaz0z$GkbUYWbhR38hA:/var/www/web1.xyz.com"
+        ]
+      }
+    }
+  ]
+}

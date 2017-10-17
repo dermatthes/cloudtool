@@ -39,8 +39,12 @@ class TextTemplateExtension
             $url = $rootUrl . "/" . $url;
         }
         $enc = isset ($args["enc"]) ? $args["enc"] : false;
-        if ( ! isset ($this->fetchCache[$url]))
+
+        $this->log("fetch url='$url'...");
+        if ( ! isset ($this->fetchCache[$url])) {
+            $this->log("=> loading from url (not cached)");
             $this->fetchCache[$url] = file_get_contents($url);
+        }
         $data = $this->fetchCache[$url];
 
         if ($enc === false)
@@ -74,6 +78,19 @@ class TextTemplateExtension
         foreach ($args as $key => $value)
             $this->template[$key] = $value;
         return null;
+    }
+
+
+    public function log ($msg) {
+        echo "[" . date ("Y-m-d H:i:s") . "] LOG: " . $msg . "\n";
+    }
+
+    public function warn ($msg) {
+        echo "[" . date ("Y-m-d H:i:s") . "] WARN: " . $msg . "\n";
+    }
+
+    public function err ($msg) {
+        echo "[" . date ("Y-m-d H:i:s") . "] !!!ERR: " . $msg . "\n";
     }
 
 

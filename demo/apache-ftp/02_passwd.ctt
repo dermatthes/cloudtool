@@ -1,6 +1,6 @@
 {template target="/etc/apache/sites-enabled/001_vhost.conf"}
 {env name="CONF_POLL_URL" > pollUrl}
-{fetch url=pollUrl enc="JSON" > config}
+{fetch url="" enc="JSON" > config}
 
 {include file="passwd.orig"}
 

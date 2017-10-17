@@ -7,8 +7,31 @@
  * Time: 13:55
  */
 
+namespace CloudTool;
+
+use CloudTool\Tpl\CloudToolTemplate;
+use Phore\Cli\CliController;
 
 require __DIR__ . "/../vendor/autoload.php";
 
-\Phore\Cli\CliController::GetInstance()->dispatch();
 
+
+$cli = CliController::GetInstance();
+
+$cli->group("ct")
+    ->command("run")
+    ->description("Run all templates in current directory")
+    ->withString("path", "Filename to template")
+    ->withBool("stdout", "Output result instead of writing to file")
+    ->run(function (string $path=null, bool $stdout) {
+        $ct = new CloudToolTemplate();
+        if ($path ===null)
+            $path = getcwd();
+        echo $ct->path($path, $stdout);
+    });
+
+
+
+
+
+$cli->dispatch();
