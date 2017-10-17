@@ -67,4 +67,22 @@ class TextTemplateExtension
         return $_ENV[$name];
     }
 
+
+    public $template = [];
+
+    public function template($args) {
+        foreach ($args as $key => $value)
+            $this->template[$key] = $value;
+        return null;
+    }
+
+
+    public function resolve ($args) {
+        $ips = gethostbynamel($args["hostname"]);
+        if ($ips === false)
+            return [];
+        asort($ips);
+        return $ips;
+    }
+
 }
