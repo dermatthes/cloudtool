@@ -102,4 +102,9 @@ class TextTemplateExtension
         return $ips;
     }
 
+
+    public function explode ($args) {
+        return explode($args["delimiter"], $args["input"]);
+    }
+
 }

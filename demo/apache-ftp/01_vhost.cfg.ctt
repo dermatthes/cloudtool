@@ -2,13 +2,13 @@
 {template onupdate="service apache2 restart"}
 {#env name="CLOUD_CONFIG_URL" > configUrl#}
 
-{fetch url="vhost.in.json" enc="JSON" > config}
+{fetch url="https://raw.githubusercontent.com/dermatthes/cloudtool/master/demo/apache-ftp/vhost.in.json" enc="JSON" > config}
 
 
-{for host in config.hosts}
+{for curHost in config.hosts}
     <VirtualHost *:80>
-        {set name=host.vhost > vhost}
-        ServerName {= host.name}
-        DocumentRoot {= host.vhost.docRoot}
+        {set vhost=curHost.lamp}
+        ServerName {= curHost.host}
+        DocumentRoot {= vhost.doc_root}
     </VirtualHost>
 {/for}

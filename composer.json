@@ -1,6 +1,6 @@
 {
     "name": "cloud/cloudtool",
-    "type": "library",
+    "type": "project",
     "description": "generate cloud-config.yml and other config files on the fly",
     "keywords": ["cloud", "template"],
     "homepage": "https://getgismo.com",
