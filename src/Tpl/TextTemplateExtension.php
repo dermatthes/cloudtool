@@ -66,9 +66,9 @@ class TextTemplateExtension
 
     public function env ($args) {
         $name = @$args["name"];
-        if ( ! isset ($_ENV[$name]))
+        if ( ! getenv($name))
             throw new \Exception("Unset environment variable requested by env name='$name'");
-        return $_ENV[$name];
+        return getenv($name);
     }
 
 
