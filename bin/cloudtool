@@ -22,6 +22,7 @@ $cli->group("ct")
     ->command("run")
     ->description("Run all templates in current directory")
     ->withString("path", "Filename to template")
+    ->withString("storePath", "Store generated files in this directory (testing)")
     ->withBool("stdout", "Output result instead of writing to file")
     ->run(function (string $path=null, bool $stdout) {
         $ct = new CloudToolTemplate();

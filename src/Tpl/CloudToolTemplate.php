@@ -31,6 +31,9 @@ class CloudToolTemplate
     }
 
 
+
+
+
     public function _templateToTarget(string $out, $opts) {
         $target = $this->fnExtension->template["target"];
         $oldFile = file_get_contents($target);
