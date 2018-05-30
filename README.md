@@ -4,6 +4,13 @@ PHP Library to generate config files.
 - 
 
 
+## Install
+
+```
+sudo composer global require cloud/cloudtool
+```
+
+
 ## Configuration Management
 
 Create configuration files from templates on the fly.
