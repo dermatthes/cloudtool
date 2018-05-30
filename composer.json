@@ -27,6 +27,4 @@
         [
             "bin/cloudtool"
         ]
-    ,
-    "minimum-stability": "dev"
 }
