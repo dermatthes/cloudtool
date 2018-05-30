@@ -55,8 +55,12 @@ class TextTemplateExtension
                 $data = json_decode($data, true);
                 break;
 
+            case "YAML":
+                $data = yaml_parse($data);
+                break;
+
             default:
-                throw new TemplateParsingException("Invalid fetch enc='$enc' (Available: JSON)");
+                throw new TemplateParsingException("Invalid fetch enc='$enc' (Available: JSON, YAML)");
         }
         if ( ! is_array($data))
             throw new \Exception("Cannot fetch '$url' (JSON): Invalid!");
